@@ -50,7 +50,7 @@ pub trait Signer<T: Runtime> {
     fn sign(
         &self,
         extrinsic: SignedPayload<T>,
-    ) -> Pin<Box<dyn Future<Output = Result<UncheckedExtrinsic<T>, String>> + Send + Sync>>;
+    ) -> Pin<Box<dyn Future<Output = Result<UncheckedExtrinsic<T>, String>> + Send>>;
 }
 
 /// Extrinsic signer using a private key.
@@ -101,7 +101,7 @@ where
     T: Runtime,
     T::AccountId: Into<T::Address> + 'static,
     <<T::Extra as SignedExtra<T>>::Extra as SignedExtension>::AdditionalSigned:
-        Send + Sync,
+        Send,
     P: Pair + 'static,
     P::Signature: Into<T::Signature> + 'static,
 {
@@ -116,7 +116,7 @@ where
     fn sign(
         &self,
         extrinsic: SignedPayload<T>,
-    ) -> Pin<Box<dyn Future<Output = Result<UncheckedExtrinsic<T>, String>> + Send + Sync>>
+    ) -> Pin<Box<dyn Future<Output = Result<UncheckedExtrinsic<T>, String>> + Send>>
     {
         let signature = extrinsic.using_encoded(|payload| self.signer.sign(payload));
         let (call, extra, _) = extrinsic.deconstruct();
