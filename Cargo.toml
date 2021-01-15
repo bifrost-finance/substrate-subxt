@@ -38,7 +38,6 @@ frame-metadata = { version = "12", package = "frame-metadata" }
 frame-support = { version = "2.0.0", package = "frame-support" }
 sp-runtime = { version = "2.0.0", package = "sp-runtime" }
 sp-version = { version = "2.0.0", package = "sp-version" }
-pallet-indices = { version = "2.0.0", package = "pallet-indices" }
 hex = "0.4.2"
 sp-std = "2.0.0"
 application-crypto = { version = "2.0.0", package = "sp-application-crypto" }
@@ -73,9 +72,9 @@ pallet-randomness-collective-flip = { git = "https://github.com/paritytech/subst
 pallet-session = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 pallet-staking = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 pallet-sudo = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
+pallet-aura = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 pallet-timestamp = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 pallet-transaction-payment = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
-pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 sc-basic-authorship = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 sc-chain-spec = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 sc-cli = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
@@ -125,3 +124,4 @@ sp-tracing = { git = "https://github.com/paritytech/substrate.git", branch = "ma
 sp-transaction-pool = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 sp-trie = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
 sp-version = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
+substrate-build-script-utils = { git = "https://github.com/paritytech/substrate.git", branch = "master" }
